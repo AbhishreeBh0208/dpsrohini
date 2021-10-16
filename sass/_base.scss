@@ -1,0 +1,49 @@
+//variables 
+$color-black: #020202;
+$color-white: #ffffff;
+$color-primary: #8500FF;
+$color-primary-dark: #500096;
+$color-primary-light: #9576FF;
+
+////////////////////////////////
+@font-face {
+    font-family: axilia;
+    src: url('Axilia 400.otf');
+}
+
+@font-face {
+    font-family: designer;
+    src: url('DESIGNER 400.otf');
+}
+
+///////////////////////////////////
+//global reset
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: $color-black;
+    background-color: $color-black;
+}
+
+/////////////////////////////////////////////
+//HELPER CLASSES
+.mgb-extra-large { margin-bottom: 10rem; }  
+.mgb-large { margin-bottom: 8rem; }  
+.mgb-big { margin-bottom: 6rem; }  
+.mgb-medium { margin-bottom: 5rem; }  
+.mgb-small { margin-bottom: 3rem; }  
+.mgl-gen {margin-left: 7rem;}

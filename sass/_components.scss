@@ -1,0 +1,423 @@
+//NAVBAR 
+.navigation {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 5rem;
+}
+
+.navbar {
+    padding-left: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-black;
+
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__logo-text {
+        color: $color-white;
+        font-size: 2.5rem;
+        margin-left: 1.5rem;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link:link, 
+    &__link:visited {
+        display: inline-block;
+        color: rgba($color-white, .75);
+        text-decoration: none;
+        font-size: 1.5rem;
+        transition: all .3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 7rem;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.user-nav {
+    background-color: $color-primary;
+    height: 7rem;
+    width: 7rem;
+    padding: 2rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &__toggle {
+        background-color: $color-white;
+        width: 2.6rem;
+        height: 2px;
+        margin-left: 1rem;
+        margin-top: 5px;
+        transition: all .3s ease-in-out;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -9px;
+            width: 130%;
+            height: 2px;
+            background-color: $color-white;
+            transition: all .3s ease-in-out;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -9px;
+            width: 130%;
+            height: 2px;
+            background-color: $color-white;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+.mega-menu {
+    background-color: $color-black;
+    padding: 1.5rem 10rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+    z-index: -1;
+
+
+    &__new, &__mice, &__headsets, &__keyboard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .mega-menu__link {
+
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__head {
+        color: $color-white;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__link:link, 
+    &__link:visited {
+        text-decoration: none;
+        color: rgba($color-white, .75);
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+.close {
+    background-color: $color-primary;
+
+    &::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    &::after {
+        transform: rotate(-135deg);
+        bottom: 0;
+    }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1000;
+}
+
+//////////////////////////////////////////
+//heading level 1
+.heading-1 {
+    font-family: 'axilia', sans-serif;
+    font-size: 5rem;
+    line-height: 1.3;
+    letter-spacing: 3px;
+    font-weight: 300;
+    letter-spacing: 5px;
+
+
+    &--white {
+        color: $color-white;
+    }
+
+    &--black {
+        color: $color-black;
+    }
+
+    &--hero {
+        font-size: 9rem;
+    }
+
+    &--intro {
+        width: 60%;
+        line-height: 1.6;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12rem;
+            height: 12rem;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-primary-light, .4);
+            border-radius: 50%;
+        }
+    }
+
+    &--products {
+        margin-left: 15rem;
+        padding: 2rem;
+        line-height: 1.6;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12rem;
+            height: 12rem;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-primary-light, .4);
+            border-radius: 50%;
+        }
+    }
+    
+    &--phone {
+        margin-bottom: 3rem;
+    }
+
+    &--product-hero {
+        font-size: 10rem;
+        margin-top: 35%;
+        margin-left: 15rem;
+    }
+
+    &--des {
+        margin-left: 10rem;
+    }
+
+    &--des-2, &--colors {
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    &--members {
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12rem;
+            height: 12rem;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-primary-light, .4);
+            border-radius: 50%;
+        }
+    }
+
+    &--about-des {
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12rem;
+            height: 12rem;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-primary-light, .4);
+            border-radius: 50%;
+        }
+    }
+
+    &--products-hero {
+        margin-bottom: 3rem;
+    }
+
+    &--shop {
+        position: relative;
+        margin-left: 10rem;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 12rem;
+            height: 12rem;
+            transform: translate(-50%, -50%);
+            background-color: rgba($color-primary-light, .4);
+            border-radius: 50%;
+        }
+    }
+
+}
+
+.color {
+    color: $color-primary;
+}
+///////////////////////////////////////
+//primary button
+.btn-primary {
+    display: flex;
+    align-items: center;
+    z-index: 999;
+
+    &__link:visited, 
+    &__link:link {
+        text-decoration: none;
+        font-size: 2rem;
+        padding: .5rem 1rem;
+        transition: all .2s ease-in-out;
+    }
+
+    &__arrow:link, 
+    &__arrow:visited {
+        color: $color-white;
+        text-decoration: none;
+        background-color: $color-primary;
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        transition: all .3s ease-in-out;
+        margin-left: 3rem;
+        transform: translateX(0);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn-primary:hover .btn-primary__arrow {
+    transform: translateX(5px);
+}
+
+.btn-primary__link--white:visited, 
+.btn-primary__link--white:link {
+    color: $color-white;
+}
+
+.btn-primary__link--black:visited, 
+.btn-primary__link--black:link {
+    color: $color-black;
+}
+
+///////////////////////////////////////////////
+//cta btn
+.cta-btn {
+
+    &:visited, 
+    &:link {
+        color: $color-white;
+        font-size: 1.6rem;
+        padding: 1rem 3rem;
+        transition: all .2s ease-in-out;
+        background-color: rgba($color-primary, 1);
+        border-radius: 100px;
+    }
+
+    &:hover {
+        background-color: rgba($color-primary, .85);
+    }
+}
+
+////////////////////////////////////////////
+//footer 
+.footer {
+    background-color: #212121;
+    padding: 3rem;
+     
+    &__text {
+        color: $color-white;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+
+/////////////////////////////////////
+//member
+.member {
+    text-align: center;
+
+    &__img {
+        width: 17rem;
+        height: 17rem;
+        border-radius: 50%;
+    }
+
+    &__text {
+        overflow: hidden;
+    }
+
+    &__name {
+        font-size: 2rem;
+        position: relative;
+        top: 1rem;
+        transition: all .3s ease-in-out;
+    }
+
+    &__post {
+        position: relative;
+        font-size: 1.8rem;
+        color: rgba($color-black, .6);
+        font-weight: 300;
+        top: 3rem;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover &__name {
+        top: -4rem;
+    }
+
+    &:hover &__post {
+        top: -2rem;
+    }
+}
